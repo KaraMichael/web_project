@@ -182,7 +182,13 @@
 	background-size: cover; 
 }
 
-.has-background-filter{
-	-webkit-filter: blur(15px);
-	-moz-filter: blur(15px);
+.has-blured{
+    background:black;
+    background:rgba(0,0,0,0.8);
+
+    filter:blur(4px);
+    -o-filter:blur(4px);
+    -ms-filter:blur(4px);
+    -moz-filter:blur(4px);
+    -webkit-filter:blur(4px);
 }

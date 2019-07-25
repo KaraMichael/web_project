@@ -1,17 +1,22 @@
 import {CountUp}  from './countUp.js';
 
 // Progressbar Logic@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-/*var progressArr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+var barvalues = [60,70,80,40,90,60]
 
-function fillProgress() {
-  progressArr.forEach(function(num, index) {
-    setTimeout(function() {
-      $('#progress-bar').val(num);
-    }, 2000 * index);
-  });
-}
-
-fillProgress(); */
+function move() {
+	var elem = document.getElementById("progress-bar");   
+	var width = 10;
+	var id = setInterval(frame, 10);
+	function frame() {
+	  if (width >= 100) {
+		clearInterval(id);
+	  } else {
+		width++; 
+		elem.style.width = width + '%'; 
+		elem.innerHTML = width * 1  + '%';
+	  }
+	}
+  }
 
 
 //Timeline logic @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -38,6 +43,8 @@ var counter4 = new CountUp('count4',1260,options1);
 var checkKPI = false;
 var togglenavbar = false;
 
+var barvalues = [60,70,80,40,90,60]
+var checkprobar = false;
 
 window.addEventListener('scroll', function(){
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -59,7 +66,14 @@ window.addEventListener('scroll', function(){
 	  var elementnavi = document.getElementById("togglenav");
 	  elementnavi.classList.remove("has-background-white")
 	  togglenavbar = false;
-}
+	}
+	if(((100/scrollable)*scrolled) > 10 && !checkprobar){
+		checkprobar = true;
+		for (i=0;i < document.getElementsByClassName("progress").length;i++){
+			document.getElementsByClassName("progress")[i]['value'] = barvalues[i]
+		}
+	}
+
 });
 
 
