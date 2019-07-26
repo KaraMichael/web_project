@@ -107,4 +107,11 @@ if (element && element.bulmaCarousel) {
 	});
 }
 
-
+document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index){
+	element.addEventListener("click", function(event){
+		event.preventDefault();
+		var navtargets = element.dataset.target;
+		var targetelement = document.getElementById(navtargets);
+		targetelement.scrollIntoView({behavior:"smooth"});
+	})
+})
