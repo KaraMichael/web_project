@@ -192,3 +192,7 @@
     -moz-filter:blur(4px);
     -webkit-filter:blur(4px);
 }
+
+article:hover{
+	background-color: #006B8E !important;
+}

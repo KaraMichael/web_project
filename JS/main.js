@@ -106,8 +106,8 @@ if (element && element.bulmaCarousel) {
 		console.log(state);
 	});
 }
-
-document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index){
+// functional navigation bar (smooth sliding)
+document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(function(element, index){
 	element.addEventListener("click", function(event){
 		event.preventDefault();
 		var navtargets = element.dataset.target;

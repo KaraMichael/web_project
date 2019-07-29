@@ -25,7 +25,7 @@
                     <a class="navbar-item" href="index.html">
                       <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
                     </a>
-                    <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                    <span class="navbar-burger burger">
                       <span></span>
                       <span></span>
                       <span></span>
@@ -36,19 +36,22 @@
                       <a class="navbar-item is-active" data-target="startscreen_sec"> 
                         HOME
                       </a>
-                      <a href="index.html" class="navbar-item" data-target="overview_me_sec">
+                      <a class="navbar-item" data-target="overview_me_sec">
                         ABOUT
                       </a>
-                      <a href="index.html" class="navbar-item">
+                      <a class="navbar-item" data-target="projects_me_sec">
                         MY WORK
                       </a>
-                      <a href="index.html" class="navbar-item">
+                      <a class="navbar-item" data-target="timeline_me_sec">
                         TIMELINE
                       </a>
-                      <a href="index.html" class="navbar-item">
+                      <a class="navbar-item" data-target="testimonial_me_sec">
                         REFFERENCES
                       </a>
-                      <a href="index.html" class="navbar-item">
+                      <a class="navbar-item" data-target="hobbies_me_sec">
+                        HOBBIES
+                      </a>
+                      <a class="navbar-item" data-target="contact_form_sec">
                         CONTACT
                       </a>
                     </div>
@@ -58,7 +61,7 @@
             </div>
               
             <!-- Hero content: will be in the middle -->
-            <div class="hero-body">
+            <div class="hero-body" id="contactmejumpdown">
               <div class="container has-text-centered">
                 <h2 class="is-size-4 is-uppercase has-text-white has-text-weight-bold">
                   <span>"create new ways"</span>
@@ -67,7 +70,7 @@
                   <span>"another awesome text"</span>
                 </h1>
                 <a 
-                href="index.html" class="button is-primary is-rounded is-medium">CONTACT ME
+                class="button is-primary is-rounded is-medium" data-target="contact_form_sec">CONTACT ME
                 </a>
             </div>
         </div>
@@ -152,14 +155,14 @@
                 <article class="media notification is-primary">
                         <figure class="media-left">
                             <span class="icon is-medium">
-                                <i class="fas fa-2x fa-home"></i>
+                                <i class="fas fa-2x fa-chart-line"></i>
                             </span>
                         </figure>
                         <div class="media-content">
                           <div class="content">
-                            <h1 class="tiitle is-size-4">PROJECT XY</h1>
+                            <h1 class="is-size-5 is-uppercase">Premium Volume Forecasting</h1>
                             <p class="is-size-5">
-                              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                              <strong>Bachelor Thesis</strong> <strong>@ZHAW</strong>
                               lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam
                             </p>
                           </div>
@@ -170,13 +173,14 @@
                   <article class="media notification is-primary">
                           <figure class="media-left">
                               <span class="icon is-medium">
-                                  <i class="fas fa-2x fa-home"></i>
+                                  <i class="fas fa-2x fa-chart-pie"></i>
                               </span>
                           </figure>
                           <div class="media-content">
                             <div class="content">
-                              <h1 class="tiitle is-size-4">PROJECT XY</h1>
+                              <h1 class="is-size-5 is-uppercase">server pattern recognition</h1>
                               <p class="is-size-5">
+                                <strong>Project</strong> <strong>@ZHAW</strong>
                                 lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam
                               </p>
                             </div>
@@ -187,13 +191,14 @@
                   <article class="media notification is-primary">
                           <figure class="media-left">
                               <span class="icon is-medium">
-                                  <i class="fas fa-2x fa-home"></i>
+                                  <i class="fas fa-2x fa-desktop"></i>
                               </span>
                           </figure>
                           <div class="media-content">
                             <div class="content">
-                              <h1 class="tiitle is-size-4">PROJECT XY</h1>
+                                <h1 class="is-size-5 is-uppercase">Simple Webapplication for Data analysis</h1>
                               <p class="is-size-5">
+                                <strong>Shiny</strong> <strong>@Privat</strong>
                                 lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam
                               </p>
                             </div>
@@ -204,13 +209,14 @@
                   <article class="media notification is-primary">
                           <figure class="media-left">
                               <span class="icon is-medium">
-                                  <i class="fas fa-2x fa-home"></i>
+                                  <i class="fas fa-2x fa-file-code"></i>
                               </span>
                           </figure>
                           <div class="media-content">
                             <div class="content">
-                              <h1 class="tiitle is-size-4">PROJECT XY</h1>
+                                <h1 class="is-size-5 is-uppercase">Code a Website & analyze interactions</h1>
                               <p class="is-size-5">
+                                <strong>Webpage</strong> <strong>@Webrepublic/Privat</strong>
                                 lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam
                               </p>
                             </div>
@@ -221,13 +227,14 @@
                   <article class="media notification is-primary">
                           <figure class="media-left">
                               <span class="icon is-medium">
-                                  <i class="fas fa-2x fa-home"></i>
+                                  <i class="fas fa-2x fa-level-up-alt"></i>
                               </span>
                           </figure>
                           <div class="media-content">
                             <div class="content">
-                              <h1 class="tiitle is-size-4">PROJECT XY</h1>
+                                <h1 class="is-size-5 is-uppercase">app implementation for more effizient use</h1>
                               <p class="is-size-5">
+                                <strong>Application</strong> <strong>@Schülke</strong>
                                 lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam
                               </p>
                             </div>
@@ -238,13 +245,14 @@
                   <article class="media notification is-primary">
                           <figure class="media-left">
                               <span class="icon is-medium">
-                                  <i class="fas fa-2x fa-home"></i>
+                                  <i class="fas fa-2x fa-brain"></i>
                               </span>
                           </figure>
                           <div class="media-content">
                             <div class="content">
-                              <h1 class="tiitle is-size-4">PROJECT XY</h1>
+                                <h1 class="is-size-5 is-uppercase">More brain teasing projects to come...</h1>
                               <p class="is-size-5">
+                                <strong>More projects</strong> <strong>@exiting places</strong>
                                 lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam
                               </p>
                             </div>
