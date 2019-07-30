@@ -117,7 +117,7 @@ document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(fu
 })
 
 
-// Modal dynamic
+// Modal dynamic @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // Open the corresponding ModalTab in the Timeline section
 document.querySelectorAll('a.bnt-more').forEach(function(element, index){
 	element.addEventListener('click', function(event){
@@ -127,10 +127,15 @@ document.querySelectorAll('a.bnt-more').forEach(function(element, index){
 	})
 })
 // Close all ModalTabs in the Timeline section through "close" button or the cross on top, right!
-document.querySelectorAll('button.modal-close-button').forEach(function(element, index){
+document.querySelectorAll('button.modal-close-button, button.delete').forEach(function(element, index){
 	element.addEventListener('click', function(event){
 		var closetargets = element.dataset.target;
 		var modaltargetsclose = document.getElementById(closetargets);
 		modaltargetsclose.style.display = 'none';
+		//Following 4 line implementations do not funktion as desired ATM! *https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 
+		if (event.target == modaltargetsclose) {
+			modaltargetsclose.style.display = "none";
+			console.log("hallo")
+		  }
 	})
 })

@@ -335,7 +335,7 @@
                     <h2>Card Title</h2>
                   <div class="date">25 MAY 2016 - 25 MAY 2016</div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                  <a class="bnt-more" href="javascript:void(0)" data-target="modal-webrepublic">More</a>
+                  <a class="bnt-more" href="javascript:void(0)" data-target="modal-zhaw">More</a>
                 </div>
               </div>   
           
@@ -660,13 +660,14 @@
             </h2>
         </div>
     </section>
+
     <div class="modal" id="modal-webrepublic">
         <div class="modal-background"></div>
         <div class="modal-card">
           <div class="section">
             <header class="modal-card-head">
               <p class="modal-card-title">Consultant Digital Analytics</p>
-              <button class="delete" aria-label="close"></button>
+              <button class="delete" aria-label="close" data-target="modal-webrepublic"></button>
             </header>
             <section class="modal-card-body">
                 <div class="content">
@@ -683,7 +684,33 @@
             </footer>
           </div>
         </div>
+    </div>
+
+    <div class="modal" id="modal-zhaw">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <div class="section">
+          <header class="modal-card-head">
+            <p class="modal-card-title">BSc</p>
+            <button class="delete" aria-label="close" data-target="modal-zhaw"></button>
+          </header>
+          <section class="modal-card-body">
+              <div class="content">
+                <h1 class="is-uppercase is-size-5 has-text-weight-semibold">Main Tasks</h1>
+                  <ul class="is-size-5">
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                  </ul>
+              </div>
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-primary modal-close-button" data-target="modal-zhaw">Close</button>
+          </footer>
+        </div>
       </div>
+  </div>
+
   <script src="./JS/bulma-carousel.min.js"></script>
   <script src="./JS/countUp.js" type="module"></script>
   <script src="./JS/main.js" type="module"></script>
