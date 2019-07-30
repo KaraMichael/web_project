@@ -43,7 +43,7 @@ var counter4 = new CountUp('count4',1260,options1);
 var checkKPI = false;
 var togglenavbar = false;
 
-var barvalues = [60,70,80,40,90,60]
+var barvalues = [60,70,80,40,90,60,10,10]
 var checkprobar = false;
 
 window.addEventListener('scroll', function(){
@@ -115,3 +115,12 @@ document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(fu
 		targetelement.scrollIntoView({behavior:"smooth"});
 	})
 })
+
+
+// Modal dynamic
+var more1 = document.getElementById('morewebrepublic');
+var modal1 = document.getElementById('modalwebrepublic');
+
+more1.onclick = function(){
+	modal1.style.display = 'block';
+}
