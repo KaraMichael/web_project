@@ -118,9 +118,19 @@ document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(fu
 
 
 // Modal dynamic
-var more1 = document.getElementById('morewebrepublic');
-var modal1 = document.getElementById('modalwebrepublic');
-
-more1.onclick = function(){
-	modal1.style.display = 'block';
-}
+// Open the corresponding ModalTab in the Timeline section
+document.querySelectorAll('a.bnt-more').forEach(function(element, index){
+	element.addEventListener('click', function(event){
+		var opentargets = element.dataset.target;
+		var modaltargets = document.getElementById(opentargets);
+		modaltargets.style.display = 'block';
+	})
+})
+// Close all ModalTabs in the Timeline section through "close" button or the cross on top, right!
+document.querySelectorAll('button.modal-close-button').forEach(function(element, index){
+	element.addEventListener('click', function(event){
+		var closetargets = element.dataset.target;
+		var modaltargetsclose = document.getElementById(closetargets);
+		modaltargetsclose.style.display = 'none';
+	})
+})
