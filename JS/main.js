@@ -1,24 +1,5 @@
 import {CountUp}  from './countUp.js';
 
-// Progressbar Logic@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-var barvalues = [60,70,80,40,90,60]
-
-function move() {
-	var elem = document.getElementById("progress-bar");   
-	var width = 10;
-	var id = setInterval(frame, 10);
-	function frame() {
-	  if (width >= 100) {
-		clearInterval(id);
-	  } else {
-		width++; 
-		elem.style.width = width + '%'; 
-		elem.innerHTML = width * 1  + '%';
-	  }
-	}
-  }
-
-
 //Timeline logic @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 document.querySelectorAll('.timeline-content').forEach(function(element, index){
 	(element.getBoundingClientRect().top-window.innerHeight);
@@ -43,7 +24,7 @@ var counter4 = new CountUp('count4',1260,options1);
 var checkKPI = false;
 var togglenavbar = false;
 
-var barvalues = [60,70,80,40,90,60,10,10]
+var barvalues = [70,80,70,70,80,60,70,90]
 var checkprobar = false;
 
 window.addEventListener('scroll', function(){
@@ -59,12 +40,12 @@ window.addEventListener('scroll', function(){
   }
   if(((100/scrollable)*scrolled) > 3 && !togglenavbar){
 	  var elementnavi = document.getElementById("togglenav");
-	  elementnavi.classList.add("has-background-white")
+	  elementnavi.classList.add("has-background-white","has-shadow")
 	  togglenavbar = true;
   }
   if(((100/scrollable)*scrolled) < 3 && togglenavbar){
 	  var elementnavi = document.getElementById("togglenav");
-	  elementnavi.classList.remove("has-background-white")
+	  elementnavi.classList.remove("has-background-white","has-shadow")
 	  togglenavbar = false;
 	}
 	if(((100/scrollable)*scrolled) > 10 && !checkprobar){
@@ -117,18 +98,27 @@ document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(fu
 })
 
 
+// Is in viewportfunction
+var isInViewport = function (elem) {
+    var bounding = elem.getBoundingClientRect();
+    return (
+		bounding.top < 150 &&
+		bounding.bottom > 300
+    );
+};
+
+
 
 // Set the active navigationbar to active CONTINUE HERE!!!!!!!
 document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index){
+	var navtargets2 = element.dataset.target;
+	var targetelement2 = document.getElementById(navtargets2);
 	window.addEventListener('scroll',function(event){
-		var navtargets2 = element.dataset.target;
-		var targetelement2 = document.getElementById(navtargets);
-		var scrolled2 = window.scrollY
-		if (targetelement2.offsetTop<scrolled2<targetelement2.offsetTop+targetelement2.offsetHeight){
+		if (isInViewport(targetelement2)){
 			element.classList.add('is-active');
 		}
 		else {
-			elemen
+			element.classList.remove('is-active');
 		}
 	})
 })
