@@ -108,7 +108,6 @@ var isInViewport = function (elem) {
 };
 
 
-
 // Set the active navigationbar to active CONTINUE HERE!!!!!!!
 document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index){
 	var navtargets2 = element.dataset.target;
