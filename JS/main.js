@@ -117,6 +117,24 @@ document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(fu
 })
 
 
+
+// Set the active navigationbar to active CONTINUE HERE!!!!!!!
+document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index){
+	window.addEventListener('scroll',function(event){
+		var navtargets2 = element.dataset.target;
+		var targetelement2 = document.getElementById(navtargets);
+		var scrolled2 = window.scrollY
+		if (targetelement2.offsetTop<scrolled2<targetelement2.offsetTop+targetelement2.offsetHeight){
+			element.classList.add('is-active');
+		}
+		else {
+			elemen
+		}
+	})
+})
+
+
+
 // Modal dynamic @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // Open the corresponding ModalTab in the Timeline section
 document.querySelectorAll('a.bnt-more').forEach(function(element, index){
