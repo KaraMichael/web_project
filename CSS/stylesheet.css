@@ -22,8 +22,8 @@
 	padding: 40px 30px 10px 30px;
   }
   .timeline-item:nth-child(even) .timeline-content .date {
-	right: auto;
-	left: 0;
+	right: 0;
+	left: auto;
   }
   .timeline-item:nth-child(even) .timeline-content::after {
 	content: '';
@@ -124,7 +124,7 @@
   }
   
   .date {
-	background:hsl(171, 100%, 41%);
+	background:hsl(171, 100%, 41%); 
 	display: inline-block;
 	color: #FFFFFF;
 	padding: 10px;
@@ -217,7 +217,7 @@ article:hover{
 
 .navbar-end :hover{
 	background-color: transparent !important;
-	color: hsl(171, 100%, 41%) !important;
+	color: hsl(171, 100%, 41%) !important; /*hsl(171, 100%, 41%)*/
 }
 
 .pdfobject-container { 
