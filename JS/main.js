@@ -102,8 +102,8 @@ document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(fu
 var isInViewport = function (elem) {
     var bounding = elem.getBoundingClientRect();
     return (
-		bounding.top < 150 &&
-		bounding.bottom > 300
+		bounding.top < 250 &&
+		bounding.bottom > 250
     );
 };
 
@@ -114,10 +114,10 @@ document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index)
 	var targetelement2 = document.getElementById(navtargets2);
 	window.addEventListener('scroll',function(event){
 		if (isInViewport(targetelement2)){
-			element.classList.add('is-active');
+			element.classList.add('is-active','has-text-weight-medium');
 		}
 		else {
-			element.classList.remove('is-active');
+			element.classList.remove('is-active','has-text-weight-medium');
 		}
 	})
 })
@@ -146,3 +146,6 @@ document.querySelectorAll('button.modal-close-button, button.delete').forEach(fu
 		  }
 	})
 })
+
+
+// Implement the PDF's files into Modal Windows!!!

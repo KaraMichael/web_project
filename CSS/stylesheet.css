@@ -81,7 +81,7 @@
   .timeline-img {
 	width: 30px;
 	height: 30px;
-	background: #3F51B5;
+	background: #006B8E;
 	border-radius: 50%;
 	position: absolute;
 	left: 50%;
@@ -124,7 +124,7 @@
   }
   
   .date {
-	background: #FF4081;
+	background:hsl(171, 100%, 41%);
 	display: inline-block;
 	color: #FFFFFF;
 	padding: 10px;
@@ -214,3 +214,8 @@ article:hover{
 	from {top:-300px; opacity:0}
 	to {top:0; opacity:1}
   }
+
+.navbar-end :hover{
+	background-color: transparent !important;
+	color: hsl(171, 100%, 41%) !important;
+}
