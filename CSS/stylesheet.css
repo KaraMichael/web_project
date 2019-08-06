@@ -81,7 +81,7 @@
   .timeline-img {
 	width: 30px;
 	height: 30px;
-	background: #006B8E;
+	background: hsl(217, 71%, 53%);
 	border-radius: 50%;
 	position: absolute;
 	left: 50%;
@@ -119,7 +119,7 @@
   blockquote {
 	margin-top: 30px;
 	color: #757575;
-	border-left-color: #3F51B5;
+	border-left-color: hsl(217, 71%, 53%);
 	padding: 0 20px;
   }
   
@@ -194,7 +194,7 @@
 }
 
 article:hover{
-	background-color: #006B8E !important;
+	background-color: hsl(217, 71%, 53%) !important;
 }
 
 /* Add Animation to modals*/
