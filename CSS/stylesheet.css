@@ -193,7 +193,7 @@
     -webkit-filter:blur(4px);
 }
 
-article:hover{
+article.media:hover{
 	background-color: hsl(217, 71%, 53%) !important;
 }
 
