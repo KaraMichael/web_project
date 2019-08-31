@@ -50,8 +50,15 @@ window.addEventListener('scroll', function(){
 	}
 	if(((100/scrollable)*scrolled) > 10 && !checkprobar){
 		checkprobar = true;
-		for (i=0;i < document.getElementsByClassName("progress").length;i++){
-			document.getElementsByClassName("progress")[i]['value'] = barvalues[i]
+		var startTime = Date.now();
+		for (let i=0;i < document.getElementsByClassName("progress").length;i++){
+			const interval = window.setInterval(function (){
+				var delta = (Date.now() - startTime) / 1000;
+				if (delta > 1 && interval) {
+					window.clearInterval(interval);
+				}
+				document.getElementsByClassName("progress")[i]['value'] = delta * barvalues[i];
+			}, 1/60*1000);
 		}
 	}
 

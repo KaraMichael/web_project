@@ -19,7 +19,7 @@
   }
   .timeline-item:nth-child(even) .timeline-content {
 	float: right;
-	padding: 40px 30px 10px 30px;
+	padding: 10px 30px 10px 30px;
   }
   .timeline-item:nth-child(even) .timeline-content .date {
 	right: 0;
@@ -175,6 +175,7 @@
 .has-image-bg{
 	background: url(/IMAGES/alps_coulds.jpg) center center;
 	background-size: cover; 
+	background-attachment: fixed;
 }
 
 .has-image-bg-2{
@@ -222,4 +223,18 @@ article.media:hover{
 
 .pdfobject-container { 
 	height: 30rem; 
-	border: 1rem solid rgba(0,0,0,.1); }
+	border: 1rem solid rgba(0,0,0,.1);
+}
+
+.slider-item > div {
+	background-color: rgba(255,255,255,0.75) !important;
+	margin: 2em;
+}
+
+.slider-item .box {
+	background-color: transparent;
+} 
+
+div#carousel-demo:focus, .slider:focus {
+	outline: none;
+}
