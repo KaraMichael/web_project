@@ -536,13 +536,14 @@
     <section class="section is-medium" id="contact_form_sec">
         <h1 class="title level-item is-uppercase">contact me</h1>
         <div class="container">
+          <form action="mail.php" method="POST">
             <p class="subtitle">
                 If you have further questions or want to cantact me, please feel free to fill out the ticket below. Or just write me a message on LinkedIn.
             </p>
             <div class="field">
                 <label class="label">Name</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Enter your name">
+                  <input class="input" type="text" placeholder="Enter your name" name="Name">
                 </div>
               </div>
 
@@ -592,17 +593,18 @@
                 <p class="is-size-5">Leave a message or contact me on LinkedIn.</p>
               </div>
               
-              <a class="button is-primary is-uppercase" href="">
+              <button class="button is-primary is-uppercase">
                 <span class="icon is-medium">
                   <i class="fas fa-paper-plane"></i>
                 </span>
                 <span>send message</span>
-              </a>
+              </button>
               <a class="button is-primary is-uppercase" href="https://www.linkedin.com/in/michael-kara-bb6b3915a" target="_blank">
                   <span class="icon is-medium">
                     <i class="fab fa-linkedin"></i>
                   </span>
                 </a>
+          </form>
         </div>
     </section>
         
