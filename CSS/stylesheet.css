@@ -180,7 +180,22 @@
 
 .has-image-bg-2{
 	background: url(/IMAGES/mountain_coulds.jpg) center center;
-	background-size: cover; 
+	background-size: cover;
+}
+
+.has-image-bg-sport{
+	background: url(/IMAGES/sport.jpg) center center;
+	background-size: cover;
+}
+
+.has-image-bg-friends{
+	background: url(/IMAGES/friends.jpg) center center;
+	background-size: cover;
+}
+
+.has-image-bg-code{
+	background: url(/IMAGES/code.jpg) center center;
+	background-size: cover;
 }
 
 .has-blured{
