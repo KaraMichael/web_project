@@ -253,3 +253,7 @@ article.media:hover{
 div#carousel-demo:focus, .slider:focus {
 	outline: none;
 }
+
+body{
+	overflow: hidden
+}
