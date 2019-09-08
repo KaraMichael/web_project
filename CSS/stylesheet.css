@@ -186,16 +186,19 @@
 .has-image-bg-sport{
 	background: url(/IMAGES/sport.jpg) center center;
 	background-size: cover;
+	min-height: 250px;
 }
 
 .has-image-bg-friends{
 	background: url(/IMAGES/friends.jpg) center center;
 	background-size: cover;
+	min-height: 250px;
 }
 
 .has-image-bg-code{
 	background: url(/IMAGES/code.jpg) center center;
 	background-size: cover;
+	min-height: 250px;
 }
 
 .has-blured{
