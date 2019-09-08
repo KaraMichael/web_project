@@ -127,7 +127,12 @@ document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index)
 			element.classList.remove('is-active','has-text-weight-medium');
 		}
 	})
-})
+});
+
+//Gapcha Funktion
+var setform = function(){
+	console.log("Hallo")
+}
 
 
 
