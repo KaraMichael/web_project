@@ -260,3 +260,13 @@ div#carousel-demo:focus, .slider:focus {
 body{
 	overflow: hidden
 }
+
+.navbar-menu.open{
+	display:block;
+}
+
+@media screen and (max-width: 1023px){
+	.navbar-menu{
+		background-color: transparent;
+	}
+}

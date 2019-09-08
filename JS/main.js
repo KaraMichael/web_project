@@ -134,5 +134,16 @@ var setform = function(){
 	console.log("Hallo")
 }
 
+// Open NavBurger on click
+document.getElementById("navburger").addEventListener("click",function(event){
+	var menu = document.getElementById("navbarMenuHeroC");
+	if (menu.classList.contains("open")){
+		menu.classList.remove("open");
+	}
+	else{
+		menu.classList.add("open");
+	}
+})
+
 
 
