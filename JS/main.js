@@ -121,10 +121,10 @@ document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index)
 	var targetelement2 = document.getElementById(navtargets2);
 	window.addEventListener('scroll',function(event){
 		if (isInViewport(targetelement2)){
-			element.classList.add('is-active','has-text-weight-medium');
+			element.classList.add('is-active','has-text-weight-semibold');
 		}
 		else {
-			element.classList.remove('is-active','has-text-weight-medium');
+			element.classList.remove('is-active','has-text-weight-semibold');
 		}
 	})
 });
@@ -142,8 +142,25 @@ document.getElementById("navburger").addEventListener("click",function(event){
 	}
 	else{
 		menu.classList.add("open");
+		var elementnavi22 = document.getElementById("togglenav");
+		elementnavi22.classList.add("has-background-white","has-shadow");
 	}
 })
 
 
 
+
+// Detect all clicks on the document
+var specifiedElement = document.getElementById('navbarMenuHeroC');
+var specifiedElement2 = document.getElementById('navburger');
+document.addEventListener('click', function(event) {
+	var isClickInside = specifiedElement.contains(event.target);
+	var isClickInside2 = specifiedElement2.contains(event.target);
+	var hasOpenClass = specifiedElement.classList.contains("open");
+	if (isClickInside2||isClickInside && hasOpenClass) {
+	  return;
+	}
+	else if (hasOpenClass) {
+	  document.getElementById('navbarMenuHeroC').classList.remove('open');
+	}
+});

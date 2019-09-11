@@ -270,3 +270,8 @@ body{
 		background-color: transparent;
 	}
 }
+
+a.navbar-item{
+	background-color: transparent !important;
+	color: #4a4a4a !important;
+}
