@@ -24,7 +24,7 @@ var counter4 = new CountUp('count4',1260,options1);
 var checkKPI = false;
 var togglenavbar = false;
 
-var barvalues = [70,80,70,70,80,60,70,90]
+var barvalues = [65,80,70,70,80,70,80,90]
 var checkprobar = false;
 
 window.addEventListener('scroll', function(){
@@ -71,7 +71,7 @@ window.addEventListener('scroll', function(){
 var options = {
 	infinite: true,
 	autoplay: true,
-	autoplaySpeed: 60000, //back to 6000 when not annoyed while coding
+	autoplaySpeed: 6000, //back to 60000 when annoyed while coding
 	pauseOnHover: true,
 	duration: 1200
 };
