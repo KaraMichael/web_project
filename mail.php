@@ -12,7 +12,6 @@
     $headers[] = "MIME-Version: 1.0";
     $headers[] = "Content-type: text/plain; charset=utf-8";
     $headers[] = "From: Kontaktformular Website <contact@info.ch>";
-    //$headers[] = "To: Info <info@coatchecker.ch>, Alexander Bleuler <a.bleuler@coatchecker.ch>, Techsupport <techsupport@coatchecker.ch>";
 	  $headers[] = "To: Michael Kara <michael.kara@hotmail.com>";
     $headers[] = "Reply-To: ".$email;
     $headers[] = "X-Mailer: PHP/".phpversion();

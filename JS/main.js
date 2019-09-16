@@ -1,6 +1,6 @@
 import {CountUp}  from './countUp.js';
 
-//Timeline logic @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//Timeline logic @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 document.querySelectorAll('.timeline-content').forEach(function(element, index){
 	(element.getBoundingClientRect().top-window.innerHeight);
 	window.addEventListener('scroll',function(){
@@ -12,8 +12,7 @@ document.querySelectorAll('.timeline-content').forEach(function(element, index){
 })
 
 
-//Crate dynamic counting up numbers for the KPI-Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// AND SlideIN Top navigation bar on scroll             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//ALL Dynamic Scroll events counting up numbers KPI-Section & navigation bar & progressbar @@@@@@@@@@@@
 var options1 = {duration: 5.5,useEasing: true,useGrouping: true,seperator: ',',decimal:','};
 var options2 = {duration: 11.5,useEasing: true,useGrouping: true,seperator: ',',decimal:','};
 
@@ -64,9 +63,7 @@ window.addEventListener('scroll', function(){
 
 });
 
-
 // Bulma Carousel Initiate @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// Initialize all div with carousel class
 
 var options = {
 	infinite: true,
@@ -115,7 +112,7 @@ var isInViewport = function (elem) {
 };
 
 
-// Set the active navigationbar to active CONTINUE HERE!!!!!!!
+// Set the active navigationbar to active @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index){
 	var navtargets2 = element.dataset.target;
 	var targetelement2 = document.getElementById(navtargets2);
@@ -134,7 +131,7 @@ var setform = function(){
 	console.log("Hallo")
 }
 
-// Open NavBurger on click
+// Open NavBurger on click @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 document.getElementById("navburger").addEventListener("click",function(event){
 	var menu = document.getElementById("navbarMenuHeroC");
 	if (menu.classList.contains("open")){
@@ -150,7 +147,7 @@ document.getElementById("navburger").addEventListener("click",function(event){
 
 
 
-// Detect all clicks on the document
+// Detect all clicks on the document when navburger is open@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 var specifiedElement = document.getElementById('navbarMenuHeroC');
 var specifiedElement2 = document.getElementById('navburger');
 document.addEventListener('click', function(event) {
@@ -164,3 +161,41 @@ document.addEventListener('click', function(event) {
 	  document.getElementById('navbarMenuHeroC').classList.remove('open');
 	}
 });
+
+//Form check @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g
+function checkForm() {
+	var valname, valmail, valtext;
+  
+	// Get the value of the input fields with id="nameid, mailid, messageid"
+	valname = document.getElementById("nameid").value;
+	valmail = document.getElementById("mailid").value;
+	valtext = document.getElementById("messageid").value;
+
+	// Regex for valid mail
+	var ismail =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	// ALL negative situations 
+	if (!ismail.test(valmail)){
+		document.getElementById("mailhint").innerHTML = "No valid email!";
+	}
+	if (valname == ""){
+		document.getElementById("namehint").innerHTML = "Please enter your name!";
+	}
+	if (valtext ==""){
+		document.getElementById("messagehint").innerHTML = "Please enter a message!";
+	}
+
+	// When it looks good
+	if (ismail.test(valmail)){
+		document.getElementById("mailhint").innerHTML = "";
+	}
+	if (!(valname == "")){
+		document.getElementById("namehint").innerHTML = "";
+	}
+	if (!(valtext =="")){
+		document.getElementById("messagehint").innerHTML = "";
+	}
+
+	return (ismail.test(valmail) && !(valname == "") && !(valtext ==""))
+}
+  

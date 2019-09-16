@@ -24,7 +24,7 @@
                 <div class="container">
                   <div class="navbar-brand">
                     <a class="navbar-item" href="index.html">
-                      <img src="/IMAGES/LogoWebsite (2).png" alt="Logo">
+                      <img src="/IMAGES/LogoWebsite.png" alt="Logo">
                     </a>
                     <span class="navbar-burger burger" id="navburger">
                       <span></span>
@@ -57,7 +57,7 @@
                       </a>
                     </div>
                   </div>
-                <!-- </div> -->
+                </div>
               </header>
             </div>
               
@@ -106,7 +106,7 @@
             </div>
             <div class="column">
                 <figure class="image">
-                    <img class="is-rounded" src="IMAGES/Michael_Kara_Portrait_667x667px.jpg" alt="Logo">
+                    <img class="is-rounded" src="IMAGES/Michael_Kara_Portrait_667x667px.jpg" alt="Portrait">
                   </figure>
             </div>
 
@@ -408,7 +408,7 @@
                   </div>
                   <div class="column is-one-third">
                     <figure class="image container is-128x128">
-                      <img class="is-rounded" src="IMAGES/john_wick.jpeg">
+                      <img class="is-rounded" src="IMAGES/john_wick.jpeg" alt="JohnWick">
                     </figure>
                   </div>
                   <div class="column is-one-third">
@@ -427,7 +427,7 @@
                     </div>
                     <div class="column is-one-third">
                       <figure class="image container is-128x128">
-                        <img class="is-rounded" src="IMAGES/captain_america.jpg">
+                        <img class="is-rounded" src="IMAGES/captain_america.jpg" alt="CaptainAmerica">
                       </figure>
                     </div>
                     <div class="column is-one-third">
@@ -446,7 +446,7 @@
                     </div>
                     <div class="column is-one-third">
                       <figure class="image container is-128x128">
-                        <img class="is-rounded" src="IMAGES/chuck_norris.jpg">
+                        <img class="is-rounded" src="IMAGES/chuck_norris.jpg" alt="ChuckNorris">
                       </figure>
                     </div>
                     <div class="column is-one-third">
@@ -539,11 +539,13 @@
             <p class="subtitle">
                 If you have further questions or want to cantact me, please feel free to fill out the ticket below. Or just write me a message on LinkedIn.
             </p>
+
             <div class="field">
                 <label class="label">Name</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Enter your name" name="NameF">
+                  <input class="input" id="nameid" type="text" placeholder="Enter your name" name="NameF">
                 </div>
+                <p class= "has-text-danger" id="namehint"></p>
               </div>
 
               <div class="field">
@@ -556,15 +558,12 @@
               <div class="field">
                 <label class="label">Email</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input is-danger" type="email" placeholder="Enter your email" name="EmailF">
+                  <input class="input" id="mailid" type="email" placeholder="Enter your email" name="EmailF">
                   <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                   </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </span>
                 </div>
-                <p class="help is-danger">This email is invalid</p>
+                <p class= "has-text-danger" id="mailhint"></p>
               </div>
               
               <div class="field">
@@ -577,8 +576,9 @@
               <div class="field">
                 <label class="label">Message</label>
                 <div class="control">
-                  <textarea class="textarea" placeholder="Enter your message" name="MessageF"></textarea>
+                  <textarea class="textarea" id="messageid" placeholder="Enter your message" name="MessageF"></textarea>
                 </div>
+                <p class= "has-text-danger" id="messagehint"></p>
               </div>
               
               <div class="field">
@@ -587,7 +587,7 @@
               
               <div class="g-recaptcha" data-sitekey="6LegSbcUAAAAADEzfUgjBeQQyzNC4UNNpVW9IXTF" data-callback="setform"></div>
 
-              <button class="button is-primary is-uppercase">
+              <button class="button is-primary is-uppercase" onclick="checkForm()">
                 <span class="icon is-medium">
                   <i class="fas fa-paper-plane"></i>
                 </span>
@@ -651,7 +651,7 @@
           </header>
           <section class="modal-card-body">
               <p>More to come, please be patient <strong>. . .</strong></p>
-              <img src="/IMAGES/monkey_keyboard.gif" alt="Logo">
+              <img src="/IMAGES/monkey_keyboard.gif" alt="MonkeyKeyboard">
               <p>In the meantime you can enjoy this GIF :-)</p>
           </section>
           <footer class="modal-card-foot">
@@ -668,7 +668,7 @@
           </header>
           <section class="modal-card-body">
               <p>We are on it <strong>. . .</strong></p>
-              <img src="/IMAGES/monkey_read.gif" alt="Logo">
+              <img src="/IMAGES/monkey_read.gif" alt="Monkey_Read">
               <p>Another GIF just for you! :-)</p>
           </section>
           <footer class="modal-card-foot">
@@ -713,10 +713,10 @@
           <p>Consultant Digital Analytics</p>
         </div>
         <div class="message-body">
-          <ul type="bullet">
+          <ul>
             <li>Yeeep, here is the monkey again...</li>
           </ul>
-          <img src="/IMAGES/monkey_chair_smile.gif" alt="Logo">
+          <img src="/IMAGES/monkey_chair_smile.gif" alt="MonkeyChair">
           <p>...you know what this means. Sorry :-/</p>
         </div>
       </article>
@@ -732,10 +732,10 @@
             <p>BSc in Engineering and Management</p>
           </div>
           <div class="message-body">
-            <ul type="bullet">
+            <ul>
               <li>Only a monkey would still try on this buttons...</li>
             </ul>
-            <img src="/IMAGES/monkey_click.gif" alt="Logo">
+            <img src="/IMAGES/monkey_click.gif" alt="MonkeyClick">
             <p>...no offense just a little pun :-P</p>
           </div>
         </article>
@@ -751,10 +751,10 @@
               <p>Service Engineer</p>
             </div>
             <div class="message-body">
-              <ul type="bullet">
+              <ul>
                 <li>Well you probably lost your temper by now...</li>
               </ul>
-              <img src="/IMAGES/monkey_laptop.gif" alt="Logo">
+              <img src="/IMAGES/monkey_laptop.gif" alt="MonkeyLaptop">
               <p>or you had at least a smile while watching those hand selected GIF's!</p>
             </div>
           </article>
@@ -768,7 +768,7 @@
   <script src="./JS/main.js" type="module"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"></script>
   <script src="./JS/pdfobject.min.js"></script>
-  <script type="text/javascript" src="./JS/modal-fx.min.js"></script>
+  <script src="./JS/modal-fx.min.js"></script>
   <script>PDFObject.embed("/PDF/GA_For_DLX.pdf", "#pdf_file1");</script>
   <script>PDFObject.embed("/PDF/GA_For_DLX.pdf", "#pdf_file2");</script>
 </body>
