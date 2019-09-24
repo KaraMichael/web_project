@@ -11,7 +11,6 @@ document.querySelectorAll('.timeline-content').forEach(function(element, index){
 	})
 })
 
-
 //ALL Dynamic Scroll events counting up numbers KPI-Section & navigation bar & progressbar @@@@@@@@@@@@
 var options1 = {duration: 5.5,useEasing: true,useGrouping: true,seperator: ',',decimal:','};
 var options2 = {duration: 11.5,useEasing: true,useGrouping: true,seperator: ',',decimal:','};
@@ -64,7 +63,6 @@ window.addEventListener('scroll', function(){
 });
 
 // Bulma Carousel Initiate @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 var options = {
 	infinite: true,
 	autoplay: true,
@@ -72,7 +70,6 @@ var options = {
 	pauseOnHover: true,
 	duration: 1200
 };
-
 var carousels = bulmaCarousel.attach('.carousel',options);
 
 // Loop on each carousel initialized
@@ -91,7 +88,8 @@ if (element && element.bulmaCarousel) {
 		console.log(state);
 	});
 }
-// functional navigation bar (smooth sliding)
+
+// functional navigation bar (smooth sliding) @@@@@@@@@@@@@@@@@@@
 document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(function(element, index){
 	element.addEventListener("click", function(event){
 		event.preventDefault();
@@ -101,8 +99,7 @@ document.querySelectorAll('#contactmejumpdown a, #navbarMenuHeroC a').forEach(fu
 	})
 })
 
-
-// Is in viewportfunction
+// Is in viewportfunction @@@@@@@@
 var isInViewport = function (elem) {
     var bounding = elem.getBoundingClientRect();
     return (
@@ -111,14 +108,16 @@ var isInViewport = function (elem) {
     );
 };
 
-
-// Set the active navigationbar to active @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// Set the active navigationbar to active & # in URL @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index){
 	var navtargets2 = element.dataset.target;
 	var targetelement2 = document.getElementById(navtargets2);
 	window.addEventListener('scroll',function(event){
 		if (isInViewport(targetelement2)){
 			element.classList.add('is-active','has-text-weight-semibold');
+			if (!(window.location.hash == "#" + navtargets2)){
+				window.history.pushState(null, null, "#" + navtargets2);
+			}
 		}
 		else {
 			element.classList.remove('is-active','has-text-weight-semibold');
@@ -126,7 +125,7 @@ document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index)
 	})
 });
 
-//Gapcha Funktion
+//Gapcha Funktion @@@@@@@
 var setform = function(){
 	console.log("Hallo")
 }
@@ -136,6 +135,8 @@ document.getElementById("navburger").addEventListener("click",function(event){
 	var menu = document.getElementById("navbarMenuHeroC");
 	if (menu.classList.contains("open")){
 		menu.classList.remove("open");
+
+		window.history.pushState(null, null, urlHash);
 	}
 	else{
 		menu.classList.add("open");
@@ -143,9 +144,6 @@ document.getElementById("navburger").addEventListener("click",function(event){
 		elementnavi22.classList.add("has-background-white","has-shadow");
 	}
 })
-
-
-
 
 // Detect all clicks on the document when navburger is open@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 var specifiedElement = document.getElementById('navbarMenuHeroC');
