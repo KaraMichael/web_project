@@ -117,8 +117,8 @@ document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index)
 			element.classList.add('is-active','has-text-weight-semibold');
 			if (!(window.location.hash == "#" + navtargets2)){
 				window.history.pushState(null, null, "#" + navtargets2);
-				dataLayer.push({'event': "VirtualPageView", 'virtualPageURL': window.location.hostname + window.location.pathname + window.location.hash,
-				'virtualPageTitle': navtargets2});
+				//dataLayer.push({'event': "VirtualPageView", 'virtualPageURL': window.location.hostname + window.location.pathname + window.location.hash,
+				//'virtualPageTitle': navtargets2});
 			}
 		}
 		else {
