@@ -6,9 +6,6 @@
     if(($error['type'] === E_ERROR) || ($error['type'] === E_USER_ERROR)|| ($error['type'] === E_USER_NOTICE)) {
     # Here we handle the error, displaying HTML, logging, ...
     echo "ERRORnr : " . $error['type']. " |Msg : ".$error['message']." |File : ".$error['file']. " |Line : " . $error['line'];
-        }else {
-        echo "no error where found " ;
-    
         }
     }
     
@@ -43,6 +40,8 @@ Betreff: ".$betreff."
 ";
 
     $sent = mail('', "Kotaktaufnahme: ".$betreff." - ".$name, $precontent.$nachricht, implode("\r\n", $headers));
+    var_dump($sent);
+    var_dump(error_get_last());
     echo "check=ok";
     } else {
           echo "check=failure";

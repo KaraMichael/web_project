@@ -213,13 +213,12 @@ function checkForm() {
       } else {
         inputs[i].classList.remove('has-error');
 	  }
-	  console.log(inputs[i].name,inputs[i].value)
       formData.append(inputs[i].name, inputs[i].value);
     }
     if(valid) {
       performMailerRequest(formData, function(res) {
         if(res) {
-          console.log("mail script response ok!");
+          //console.log("mail script response ok!");
           //showFormConfirm(formData);
           //window.dataLayer.push({'event': 'xhrsubmit'});
         }
@@ -228,7 +227,6 @@ function checkForm() {
   });
 
   const performMailerRequest = function(formData, callback) {
-	console.log("perform mailer request", formData)
     var request = new XMLHttpRequest();
     var response = false;
     request.open('POST', '/mail.php');
