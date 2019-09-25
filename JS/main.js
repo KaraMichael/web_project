@@ -198,4 +198,45 @@ function checkForm() {
 
 	return (ismail.test(valmail) && !(valname == "") && !(valtext ==""))
 }
-  
+
+//Email Logic@@@@@@@@
+  var btnSubmit = document.getElementById("btnSubmit");
+  btnSubmit.addEventListener('click', function(e) {
+    e.preventDefault();
+    var valid = true;
+	var formData = new FormData();
+	var inputs = document.querySelectorAll('.formdata');
+    for(var i = 0; i < inputs.length; i++) {
+      if(inputs[i].hasAttribute('required') && !(inputs[i].checkValidity())) {
+        inputs[i].classList.add('has-error');
+		valid = false;
+      } else {
+        inputs[i].classList.remove('has-error');
+	  }
+	  console.log(inputs[i].name,inputs[i].value)
+      formData.append(inputs[i].name, inputs[i].value);
+    }
+    if(valid) {
+      performMailerRequest(formData, function(res) {
+        if(res) {
+          console.log("mail script response ok!");
+          //showFormConfirm(formData);
+          //window.dataLayer.push({'event': 'xhrsubmit'});
+        }
+      });
+    }
+  });
+
+  const performMailerRequest = function(formData, callback) {
+	console.log("perform mailer request", formData)
+    var request = new XMLHttpRequest();
+    var response = false;
+    request.open('POST', '/mail.php');
+    request.send(formData);
+    request.onload = function() {
+      if(this.responseText == "check=ok") {
+        response = true;
+      }
+      callback(response);
+    };
+  }

@@ -26,7 +26,7 @@
     $headers   = array();
     $headers[] = "MIME-Version: 1.0";
     $headers[] = "Content-type: text/plain; charset=utf-8";
-    $headers[] = "From: Kontaktformular Website <contact@info.ch>";
+    $headers[] = "From: Kontaktformular Website <contact@michaelkara.ch>";
 	  $headers[] = "To: Michael Kara <michael.kara@hotmail.com>";
     $headers[] = "Reply-To: ".$email;
     $headers[] = "X-Mailer: PHP/".phpversion();
@@ -43,8 +43,6 @@ Betreff: ".$betreff."
 ";
 
     $sent = mail('', "Kotaktaufnahme: ".$betreff." - ".$name, $precontent.$nachricht, implode("\r\n", $headers));
-    var_dump($sent);
-    var_dump(error_get_last());
     echo "check=ok";
     } else {
           echo "check=failure";
