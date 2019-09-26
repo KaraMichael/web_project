@@ -179,9 +179,9 @@ document.addEventListener('click', function(event) {
     if(valid) {
       performMailerRequest(formData, function(res) {
         if(res) {
-          console.log("mail script response ok!");
-          showFormConfirm(formData);
-          window.dataLayer.push({'event': 'xhrsubmit'});
+          //console.log("mail script response ok!");
+          //showFormConfirm(formData);
+          //window.dataLayer.push({'event': 'xhrsubmit'});
         }
       });
 	}
@@ -202,3 +202,40 @@ document.addEventListener('click', function(event) {
 
   //window.dataLayer = window.dataLayer || [];
   //window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
+
+  //Form check @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g
+function checkForm() {
+	var valname, valmail, valtext;
+
+	// Get the value of the input fields with id="nameid, mailid, messageid"
+	valname = document.getElementById("nameid").value;
+	valmail = document.getElementById("mailid").value;
+	valtext = document.getElementById("messageid").value;
+
+	// Regex for valid mail
+	var ismail =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	// ALL negative situations 
+	if (!ismail.test(valmail)){
+		document.getElementById("mailhint").innerHTML = "No valid email!";
+	}
+	if (valname == ""){
+		document.getElementById("namehint").innerHTML = "Please enter your name!";
+	}
+	if (valtext ==""){
+		document.getElementById("messagehint").innerHTML = "Please enter a message!";
+	}
+
+	// When it looks good
+	if (ismail.test(valmail)){
+		document.getElementById("mailhint").innerHTML = "";
+	}
+	if (!(valname == "")){
+		document.getElementById("namehint").innerHTML = "";
+	}
+	if (!(valtext =="")){
+		document.getElementById("messagehint").innerHTML = "";
+	}
+
+	return (ismail.test(valmail) && !(valname == "") && !(valtext ==""))
+}
