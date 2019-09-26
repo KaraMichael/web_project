@@ -164,16 +164,15 @@ document.addEventListener('click', function(event) {
   var btnSubmit = document.getElementById("btnSubmit");
   btnSubmit.addEventListener('click', function(e) {
 	e.preventDefault();
-	console.log("funktioniert")
     var valid = true;
 		var formData = new FormData();
 		var inputs = document.querySelectorAll('.formdata');
     for(var i = 0; i < inputs.length; i++) {
       if(inputs[i].hasAttribute('required') && !(inputs[i].checkValidity())) {
-        inputs[i].classList.add('has-error');
+        inputs[i].classList.add('is-danger');
 			valid = false;
       } else {
-        inputs[i].classList.remove('has-error');
+        inputs[i].classList.remove('is-danger');
 	  }
       formData.append(inputs[i].name, inputs[i].value);
     }
