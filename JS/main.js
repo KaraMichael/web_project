@@ -194,8 +194,10 @@ document.addEventListener('click', function(event) {
     request.open('POST', '/mail.php');
     request.send(formData);
     request.onload = function() {
-      if(this.responseText == "check=ok") {
+      if(this.responseText == "bool(true) NULL check=ok") {
 		response = true;
+		window.dataLayer = window.dataLayer || [];
+  		window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
       }
       callback(response);
     };
