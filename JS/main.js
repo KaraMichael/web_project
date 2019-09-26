@@ -127,11 +127,6 @@ document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index)
 	})
 });
 
-//Gapcha Funktion @@@@@@@
-var setform = function(){
-	console.log("Hallo")
-}
-
 // Open NavBurger on click @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 document.getElementById("navburger").addEventListener("click",function(event){
 	var menu = document.getElementById("navbarMenuHeroC");
@@ -162,6 +157,9 @@ document.addEventListener('click', function(event) {
 	}
 });
 
+// Disable Send Message button again after use @@@@@@@@@@
+
+
 //Email Logic@@@@@@@@
   var btnSubmit = document.getElementById("btnSubmit");
   btnSubmit.addEventListener('click', function(e) {
@@ -186,7 +184,8 @@ document.addEventListener('click', function(event) {
           //window.dataLayer.push({'event': 'xhrsubmit'});
         }
       });
-    }
+	}
+	btnSubmit.disabled = true;
   });
 
   const performMailerRequest = function(formData, callback) {
