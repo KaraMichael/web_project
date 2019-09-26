@@ -183,7 +183,7 @@ document.addEventListener('click', function(event) {
         if(res) {
 			window.dataLayer = window.dataLayer || [];
 			window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
-			document.getElementById('modal-thankyou').style.display = "block";
+			document.getElementById('modal-thankyou').classList.add('is-active');
 			console.log('pickelrick!')
           //console.log("mail script response ok!");
           //showFormConfirm(formData);
@@ -194,7 +194,7 @@ document.addEventListener('click', function(event) {
   });
 
   const close_modal = function(){
-	  document.getElementById('modal-thankyou').style.display = "none";
+	  document.getElementById('modal-thankyou').classList.remove('is-active');
   }
 
   const performMailerRequest = function(formData, callback) {
