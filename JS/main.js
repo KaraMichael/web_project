@@ -193,7 +193,7 @@ document.addEventListener('click', function(event) {
 	}
   });
 
-  const close_modal = function(){
+  var close_modal = function(){
 	  document.getElementById('modal-thankyou').classList.remove('is-active');
   }
 
