@@ -196,8 +196,6 @@ document.addEventListener('click', function(event) {
     request.onload = function() {
       if(this.responseText == "check=ok") {
 		response = true;
-		window.dataLayer = window.dataLayer || [];
-		window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
       }
       callback(response);
     };
