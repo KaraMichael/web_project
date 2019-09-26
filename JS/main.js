@@ -165,12 +165,12 @@ document.addEventListener('click', function(event) {
   btnSubmit.addEventListener('click', function(e) {
     e.preventDefault();
     var valid = true;
-	var formData = new FormData();
-	var inputs = document.querySelectorAll('.formdata');
+		var formData = new FormData();
+		var inputs = document.querySelectorAll('.formdata');
     for(var i = 0; i < inputs.length; i++) {
       if(inputs[i].hasAttribute('required') && !(inputs[i].checkValidity())) {
         inputs[i].classList.add('has-error');
-		valid = false;
+			valid = false;
       } else {
         inputs[i].classList.remove('has-error');
 	  }
