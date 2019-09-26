@@ -182,9 +182,7 @@ document.addEventListener('click', function(event) {
           //console.log("mail script response ok!");
           //showFormConfirm(formData);
           //window.dataLayer.push({'event': 'xhrsubmit'});
-        } else {
-			alertFormStatus(false);
-		}
+        }
       });
 	}
   });
@@ -204,6 +202,8 @@ document.addEventListener('click', function(event) {
 
   //window.dataLayer = window.dataLayer || [];
   //window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
+
+
 
   //Form check @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g
 function checkForm() {
