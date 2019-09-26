@@ -40,8 +40,6 @@ Subject: ".$betreff."
 ";
 
     $sent = mail('', "Kotaktaufnahme: ".$betreff." - ".$name, $precontent.$nachricht, implode("\r\n", $headers));
-    var_dump($sent);
-    var_dump(error_get_last());
     echo "check=ok";
     } else {
           echo "check=failure";
