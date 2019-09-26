@@ -177,6 +177,7 @@ document.addEventListener('click', function(event) {
       formData.append(inputs[i].name, inputs[i].value);
     }
     if(valid) {
+		console.log("This Worked")
       performMailerRequest(formData, function(res) {
         if(res) {
           //console.log("mail script response ok!");
@@ -196,7 +197,6 @@ document.addEventListener('click', function(event) {
     request.onload = function() {
       if(this.responseText == "bool(true) NULL check=ok") {
 		response = true;
-		console.log("This Worked")
 		window.dataLayer = window.dataLayer || [];
   		window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
       }
