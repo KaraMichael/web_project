@@ -181,6 +181,10 @@ document.addEventListener('click', function(event) {
     if(valid) {
       performMailerRequest(formData, function(res) {
         if(res) {
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
+			document.getElementById('modal-thankyou').style.display = "block";
+			console.log('pickelrick!')
           //console.log("mail script response ok!");
           //showFormConfirm(formData);
           //window.dataLayer.push({'event': 'xhrsubmit'});
@@ -188,6 +192,10 @@ document.addEventListener('click', function(event) {
       });
 	}
   });
+
+  const close_modal = function(){
+	  document.getElementById('modal-thankyou').style.display = "none";
+  }
 
   const performMailerRequest = function(formData, callback) {
     var request = new XMLHttpRequest();
@@ -197,15 +205,11 @@ document.addEventListener('click', function(event) {
     request.onload = function() {
       if(this.responseText == "check=ok") {
 		response = true;
-		console.log("ggg")
 
       }
       callback(response);
     };
   }
-
-  //window.dataLayer = window.dataLayer || [];
-  //window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
 
 
 

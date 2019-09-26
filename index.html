@@ -579,7 +579,7 @@
               
               <div class="g-recaptcha" data-sitekey="6LegSbcUAAAAADEzfUgjBeQQyzNC4UNNpVW9IXTF" data-callback="setform"></div>
 
-              <button class="button is-primary is-uppercase" id="btnSubmit" data-target="modal-thankyou" disabled>    
+              <button class="button is-primary is-uppercase" id="btnSubmit" disabled>    
                 <span class="icon is-medium">
                   <i class="fas fa-paper-plane"></i>
                 </span>
@@ -764,7 +764,7 @@
       </div>
 
     <div id="modal-thankyou" class="modal modal-fx-fadeInScale">
-        <div class="modal-background"></div>
+        <div class="modal-background" onclick="close_modal"></div>
         <div class="modal-content">
           <article class="message is-primary">
             <div class="message-header">
@@ -778,7 +778,7 @@
             </div>
           </article>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+        <button class="modal-close is-large" aria-label="close" onclick="close_modal"></button>
     </div>
 
   <script src="./JS/bulma-carousel.min.js"></script>
