@@ -163,7 +163,8 @@ document.addEventListener('click', function(event) {
 //Email Logic@@@@@@@@
   var btnSubmit = document.getElementById("btnSubmit");
   btnSubmit.addEventListener('click', function(e) {
-    e.preventDefault();
+	e.preventDefault();
+	console.log("funktioniert")
     var valid = true;
 		var formData = new FormData();
 		var inputs = document.querySelectorAll('.formdata');
