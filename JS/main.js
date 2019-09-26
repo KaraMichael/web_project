@@ -177,14 +177,11 @@ document.addEventListener('click', function(event) {
       formData.append(inputs[i].name, inputs[i].value);
     }
     if(valid) {
-		window.dataLayer = window.dataLayer || [];
-		window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
-		btnSubmit.disabled = true;
       performMailerRequest(formData, function(res) {
         if(res) {
-          //console.log("mail script response ok!");
-          //showFormConfirm(formData);
-          //window.dataLayer.push({'event': 'xhrsubmit'});
+          console.log("mail script response ok!");
+          showFormConfirm(formData);
+          window.dataLayer.push({'event': 'xhrsubmit'});
         }
       });
 	}
@@ -202,3 +199,6 @@ document.addEventListener('click', function(event) {
       callback(response);
     };
   }
+
+  //window.dataLayer = window.dataLayer || [];
+  //window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
