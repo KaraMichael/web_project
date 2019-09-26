@@ -196,6 +196,7 @@ document.addEventListener('click', function(event) {
     request.onload = function() {
       if(this.responseText == "bool(true) NULL check=ok") {
 		response = true;
+		console.log("This Worked")
 		window.dataLayer = window.dataLayer || [];
   		window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
       }
