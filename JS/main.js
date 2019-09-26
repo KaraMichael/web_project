@@ -177,7 +177,9 @@ document.addEventListener('click', function(event) {
       formData.append(inputs[i].name, inputs[i].value);
     }
     if(valid) {
-		console.log("This Worked")
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
+		btnSubmit.disabled = true;
       performMailerRequest(formData, function(res) {
         if(res) {
           //console.log("mail script response ok!");
@@ -186,7 +188,6 @@ document.addEventListener('click', function(event) {
         }
       });
 	}
-	btnSubmit.disabled = true;
   });
 
   const performMailerRequest = function(formData, callback) {
@@ -195,10 +196,8 @@ document.addEventListener('click', function(event) {
     request.open('POST', '/mail.php');
     request.send(formData);
     request.onload = function() {
-      if(this.responseText == "bool(true) NULL check=ok") {
+      if(this.responseText == "check=ok") {
 		response = true;
-		window.dataLayer = window.dataLayer || [];
-  		window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
       }
       callback(response);
     };
