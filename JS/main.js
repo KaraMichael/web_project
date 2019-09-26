@@ -169,13 +169,15 @@ document.addEventListener('click', function(event) {
 		var inputs = document.querySelectorAll('.formdata');
     for(var i = 0; i < inputs.length; i++) {
       if(inputs[i].hasAttribute('required') && !(inputs[i].checkValidity())) {
-        inputs[i].classList.add('is-danger');
+		inputs[i].classList.add('is-danger');
+		
 			valid = false;
       } else {
         inputs[i].classList.remove('is-danger');
 	  }
       formData.append(inputs[i].name, inputs[i].value);
-    }
+	}
+	checkForm()
     if(valid) {
       performMailerRequest(formData, function(res) {
         if(res) {
