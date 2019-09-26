@@ -197,6 +197,8 @@ document.addEventListener('click', function(event) {
     request.onload = function() {
       if(this.responseText == "check=ok") {
 		response = true;
+		console.log("ggg")
+
       }
       callback(response);
     };

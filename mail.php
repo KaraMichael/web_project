@@ -1,17 +1,4 @@
 <?php
-  function fatalErrorHandler() {
-    # Getting last error
-    $error = error_get_last();
-    # Checking if last error is a fatal error
-    if(($error['type'] === E_ERROR) || ($error['type'] === E_USER_ERROR)|| ($error['type'] === E_USER_NOTICE)) {
-    # Here we handle the error, displaying HTML, logging, ...
-    echo "ERRORnr : " . $error['type']. " |Msg : ".$error['message']." |File : ".$error['file']. " |Line : " . $error['line'];
-        }
-    }
-    
-  # Registering shutdown function
-  register_shutdown_function('fatalErrorHandler');
-
   if($_POST["NameF"] != "" && $_POST["EmailF"] != "" && $_POST["MessageF"] != "")
   {
 
@@ -40,12 +27,17 @@ Subject: ".$betreff."
 ";
 
     $sent = mail('', "Kotaktaufnahme: ".$betreff." - ".$name, $precontent.$nachricht, implode("\r\n", $headers));
-    var_dump($sent);
-    var_dump(error_get_last());
-    echo "check=ok";
-    } else {
-          echo "check=failure";
+    if($sent){
+      echo "check=ok";
     }
+    else{
+      echo "check=failure";
+    }
+}
+    
+else {
+      echo "check=failure";
+}
 
 
 ?>
