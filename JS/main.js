@@ -182,7 +182,9 @@ document.addEventListener('click', function(event) {
           //console.log("mail script response ok!");
           //showFormConfirm(formData);
           //window.dataLayer.push({'event': 'xhrsubmit'});
-        }
+        } else {
+			alertFormStatus(false);
+		}
       });
 	}
   });
