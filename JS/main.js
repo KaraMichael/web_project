@@ -190,11 +190,11 @@ document.addEventListener('click', function(event) {
         }
       });
 	}
-btnSubmit.disabled = true;
   });
 
   var close_modal = function(){
 	  document.getElementById('modal-thankyou').classList.remove('is-active');
+	  document.getElementById('btnSubmit').disabled = true;
   }
 
   const performMailerRequest = function(formData, callback) {
