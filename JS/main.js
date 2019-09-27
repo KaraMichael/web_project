@@ -165,7 +165,6 @@ document.addEventListener('click', function(event) {
   btnSubmit.addEventListener('click', function(e) {
 	e.preventDefault();
 	var valid = true;
-	btnSubmit.disabled = true;
 		var formData = new FormData();
 		var inputs = document.querySelectorAll('.formdata');
     for(var i = 0; i < inputs.length; i++) {
@@ -191,6 +190,7 @@ document.addEventListener('click', function(event) {
         }
       });
 	}
+btnSubmit.disabled = true;
   });
 
   var close_modal = function(){
