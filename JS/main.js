@@ -164,7 +164,8 @@ document.addEventListener('click', function(event) {
   var btnSubmit = document.getElementById("btnSubmit");
   btnSubmit.addEventListener('click', function(e) {
 	e.preventDefault();
-    var valid = true;
+	var valid = true;
+	document.getElementById('btnSubmit').disabled = true;
 		var formData = new FormData();
 		var inputs = document.querySelectorAll('.formdata');
     for(var i = 0; i < inputs.length; i++) {
@@ -177,7 +178,6 @@ document.addEventListener('click', function(event) {
 	  }
       formData.append(inputs[i].name, inputs[i].value);
 	}
-	document.getElementById('btnSubmit').disabled = true;
 	checkForm()
     if(valid) {
       performMailerRequest(formData, function(res) {
