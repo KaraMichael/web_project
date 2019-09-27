@@ -163,6 +163,7 @@ document.addEventListener('click', function(event) {
 //Email Logic@@@@@@@@
   var btnSubmit = document.getElementById("btnSubmit");
   btnSubmit.addEventListener('click', function(e) {
+	btnSubmit.disabled = true;
 	e.preventDefault();
 	var valid = true;
 		var formData = new FormData();
@@ -194,7 +195,6 @@ document.addEventListener('click', function(event) {
 
   var close_modal = function(){
 	  document.getElementById('modal-thankyou').classList.remove('is-active');
-	  document.getElementById('btnSubmit').disabled = true;
   }
 
   const performMailerRequest = function(formData, callback) {
