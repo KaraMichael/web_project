@@ -184,7 +184,7 @@ document.addEventListener('click', function(event) {
 			window.dataLayer = window.dataLayer || [];
 			window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
 			document.getElementById('modal-thankyou').classList.add('is-active');
-			document.getElementById('btnSubmit').disabled = false;
+			document.getElementById('btnSubmit').disabled = true;
           //console.log("mail script response ok!");
           //showFormConfirm(formData);
           //window.dataLayer.push({'event': 'xhrsubmit'});
