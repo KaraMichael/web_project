@@ -163,7 +163,6 @@ document.addEventListener('click', function(event) {
 //Email Logic@@@@@@@@
   var btnSubmit = document.getElementById("btnSubmit");
   btnSubmit.addEventListener('click', function(e) {
-	btnSubmit.disabled = true;
 	e.preventDefault();
 	var valid = true;
 		var formData = new FormData();
@@ -185,6 +184,7 @@ document.addEventListener('click', function(event) {
 			window.dataLayer = window.dataLayer || [];
 			window.dataLayer.push({event: 'formSubmissionSuccess',formId: 'contactForm'});
 			document.getElementById('modal-thankyou').classList.add('is-active');
+			document.getElementById("btnSubmit").disabled = true;
           //console.log("mail script response ok!");
           //showFormConfirm(formData);
           //window.dataLayer.push({'event': 'xhrsubmit'});
@@ -221,7 +221,9 @@ function checkForm() {
 	valname = document.getElementById("nameid").value;
 	valmail = document.getElementById("mailid").value;
 	valtext = document.getElementById("messageid").value;
-
+	valsub = document.getElementById("subjectid").value;
+	valfun = document.getElementById("funcid").value;
+	
 	// Regex for valid mail
 	var ismail =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -235,6 +237,12 @@ function checkForm() {
 	if (valtext ==""){
 		document.getElementById("messagehint").innerHTML = "Please enter a message!";
 	}
+	if (valsub ==""){
+		document.getElementById("subjecthint").innerHTML = "Please enter the subject!";
+	}
+	if (valfun ==""){
+		document.getElementById("funchint").innerHTML = "Please enter your function!";
+	}
 
 	// When it looks good
 	if (ismail.test(valmail)){
@@ -246,6 +254,12 @@ function checkForm() {
 	if (!(valtext =="")){
 		document.getElementById("messagehint").innerHTML = "";
 	}
+	if (!(valsub =="")){
+		document.getElementById("subjecthint").innerHTML = "";
+	}
+	if (!(valfun =="")){
+		document.getElementById("funchint").innerHTML = "";
+	}
 
-	return (ismail.test(valmail) && !(valname == "") && !(valtext ==""))
+	return (ismail.test(valmail) && !(valname == "") && !(valtext =="") && !(valsub =="") && !(valfun ==""))
 }
