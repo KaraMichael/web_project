@@ -215,7 +215,7 @@ document.addEventListener('click', function(event) {
 
   //Form check @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g
 function checkForm() {
-	var valname, valmail, valtext;
+	var valname, valmail, valtext, valsub, valfun;
 
 	// Get the value of the input fields with id="nameid, mailid, messageid"
 	valname = document.getElementById("nameid").value;
