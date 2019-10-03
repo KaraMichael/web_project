@@ -132,8 +132,6 @@ document.getElementById("navburger").addEventListener("click",function(event){
 	var menu = document.getElementById("navbarMenuHeroC");
 	if (menu.classList.contains("open")){
 		menu.classList.remove("open");
-
-		window.history.pushState(null, null, urlHash);
 	}
 	else{
 		menu.classList.add("open");
