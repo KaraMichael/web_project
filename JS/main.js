@@ -116,9 +116,9 @@ document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index)
 	window.addEventListener('scroll',function(event){
 		if (isInViewport(targetelement2)){
 			element.classList.add('is-active','has-text-weight-semibold');
-			if (!(window.location.pathname == "/" + navtargets2)){
+			if (!(window.location.pathname == "/#" + navtargets2)){
 				//window.location.hash = navtargets2;
-				window.history.pushState(null, "section" + navtargets2, navtargets2);
+				window.history.pushState(null, "section" + navtargets2, "#" + navtargets2);
 				document.dispatchEvent(eventvar);
 			}
 		}
