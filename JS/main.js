@@ -112,14 +112,14 @@ var isInViewport = function (elem) {
 document.querySelectorAll('#navbarMenuHeroC a').forEach(function(element, index){
 	var navtargets2 = element.dataset.target;
 	var targetelement2 = document.getElementById(navtargets2);
+	var eventvar = new CustomEvent('ownEvent', { detail: navtargets2 });
 	window.addEventListener('scroll',function(event){
 		if (isInViewport(targetelement2)){
 			element.classList.add('is-active','has-text-weight-semibold');
-			if (!(window.location.hash == "#" + navtargets2)){
-				window.location.hash = navtargets2;
-				//window.history.pushState(null, null, "#" + navtargets2); <<< 2te Variante um url zu wechseln
-				//dataLayer.push({'event': "VirtualPageView", 'virtualPageURL': window.location.hostname + window.location.pathname + window.location.hash,
-				//'virtualPageTitle': navtargets2});
+			if (!(window.location.pathname == "/" + navtargets2)){
+				//window.location.hash = navtargets2;
+				window.history.pushState(null, "section" + navtargets2, navtargets2);
+				document.dispatchEvent(eventvar);
 			}
 		}
 		else {
