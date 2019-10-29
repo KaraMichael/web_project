@@ -29,7 +29,7 @@
               <header class="navbar is-fixed-top" id="togglenav">
                 <div class="container">
                   <div class="navbar-brand">
-                    <a class="navbar-item" href="http://www.michaelkara.ch">
+                    <a class="navbar-item" href="http://www.michaelkara.ch" id="navmenu0">
                       <img src="/IMAGES/LogoWebsite.png" alt="Logo">
                     </a>
                     <span class="navbar-burger burger" id="navburger">
@@ -40,14 +40,14 @@
                   </div>
                   <div id="navbarMenuHeroC" class="navbar-menu">
                     <div class="navbar-end">
-                      <a class="navbar-item is-active is-uppercase" data-target="Home">home</a>
-                      <a class="navbar-item is-uppercase" data-target="About">about</a>
-                      <a class="navbar-item is-uppercase" data-target="Projects">projects</a>
-                      <a class="navbar-item is-uppercase is-hidden" data-target="Numbers">numbers</a>
-                      <a class="navbar-item is-uppercase" data-target="Timeline">timeline</a>
-                      <a class="navbar-item is-uppercase" data-target="Testimonial">testimonial</a>
-                      <a class="navbar-item is-uppercase" data-target="Hobbies">hobbies</a>
-                      <a class="navbar-item is-uppercase" data-target="Contact">contact</a>
+                      <a class="navbar-item is-active is-uppercase" id="navmenu1" data-target="Home">home</a>
+                      <a class="navbar-item is-uppercase" id="navmenu2" data-target="About">about</a>
+                      <a class="navbar-item is-uppercase" id="navmenu3" data-target="Projects">projects</a>
+                      <a class="navbar-item is-uppercase is-hidden" id="navmenu4" data-target="Numbers">numbers</a>
+                      <a class="navbar-item is-uppercase" id="navmenu5" data-target="Timeline">timeline</a>
+                      <a class="navbar-item is-uppercase" id="navmenu6" data-target="Testimonial">testimonial</a>
+                      <a class="navbar-item is-uppercase" id="navmenu7" data-target="Hobbies">hobbies</a>
+                      <a class="navbar-item is-uppercase" id="navmenu8" data-target="Contact">contact</a>
                     </div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@
                   <span>Michael Kara</span>
                 </h1>
                 <a 
-                class="button is-primary is-rounded is-medium" data-target="Contact">CONTACT ME
+                class="button is-primary is-rounded is-medium" id="button1_home" data-target="Contact">CONTACT ME
                 </a>
             </div>
         </div>
@@ -85,13 +85,13 @@
                 </p>
               </div>
                 <div class="field">
-                    <a class="button is-primary is-medium is-uppercase" href="/PDF/CV_SAMPLE.pdf" download>
+                    <a class="button is-primary is-medium is-uppercase" id="button2_about" href="/PDF/CV_SAMPLE.pdf" download>
                         <span class="icon is-medium">
                           <i class="fas fa-file-download"></i>
                         </span>
                         <span>download CV</span>
                     </a>
-                    <a class="button is-primary is-medium is-uppercase" href="https://www.linkedin.com/in/michael-kara-bb6b3915a" target="_blank">
+                    <a class="button is-primary is-medium is-uppercase" id="button3_about" href="https://www.linkedin.com/in/michael-kara-bb6b3915a" target="_blank">
                       <span class="icon is-medium">
                         <i class="fab fa-linkedin"></i>
                       </span>
@@ -145,7 +145,7 @@
                               <strong>Bachelor Thesis</strong> <strong>@ZHAW</strong>
                             </p>
                             <p>The goal was to create a model to predict premium volume in the coorporal business area for a large insurer. To do so we analyzed data from over two years with the help of R and SQL. We diveded the predications into three parts: new, on going and canceled contracts. </p>
-                            <span class="button modal-button" data-target="modal-zhaw">Read more</span>
+                            <span class="button modal-button" id="button4_projects" data-target="modal-zhaw">Read more</span>
                           </div>
                         </div>  
                 </article>
@@ -164,7 +164,7 @@
                                 <strong>Project</strong> <strong>@ZHAW</strong>
                               </p>
                               <p>We aimed for an algorithm which recognizes server patterns and divides them into different categories. Therfore we where provided with server metrics which was measured periodically. This should help the department of IT to determine when to shut down certain processes.</p>
-                              <span class="button modal-button" data-target="modal-pa">Read more</span>
+                              <span class="button modal-button" id="button5_projects" data-target="modal-pa">Read more</span>
                             </div>
                           </div>  
                   </article>
@@ -183,7 +183,7 @@
                                 <strong>Shiny</strong> <strong>@Privat</strong>
                               </p>
                               <p>As an addiation little project to learn more about the Shiny package of R I have created a simple application where one can iteract with the titanic dataset included in R. There is also a prediction tab where you can check wether you would have surived the tragedy or not.</p>
-                              <a class="button" href="https://michaelkara.shinyapps.io/Titanic/" target="_blank">Open APP</a>
+                              <a class="button" href="https://michaelkara.shinyapps.io/Titanic/" id="button6_projects" target="_blank">Open APP</a>
                             </div>
                           </div>  
                   </article>
@@ -201,7 +201,7 @@
                               <p class="is-size-5">
                                 <strong>Webpage</strong> <strong>@Webrepublic/Privat</strong>
                               <p>One of my first task at webrepublic was to create a tracking concept for my website (the one your on right now!). Together with tools like google tag manager (GTM), google analytics (GA) and data studio, analysis was made to improve the website as well as the userexperience.</p>
-                              <span class="button modal-button" data-target="modal-tracking">Read more</span>
+                              <span class="button modal-button" id="button7_projects" data-target="modal-tracking">Read more</span>
                             </div>
                           </div>  
                   </article>
@@ -219,7 +219,7 @@
                               <p class="is-size-5">
                                 <strong>Application</strong> <strong>@Schülke</strong>
                               <p>In my time as a field service engineer for schülke we used to have a lot of paperwork. For a more efficient workflow we packed the whole technical work process into an application. From reports signed on mobille phone to automated mailings to the administration team.</p>
-                              <span class="button modal-button" data-target="modal-app">Read more</span>
+                              <span class="button modal-button" id="button8_projects" data-target="modal-app">Read more</span>
                             </div>
                           </div>  
                   </article>
@@ -238,7 +238,7 @@
                                 <strong>Brainfood</strong> <strong>@word wide web</strong>
                               </p>
                               <p>In additon to such tasks I enjoy reading, watching or listen to interesting new technologies and findings. Its a pleasant feeling to know how things work. Therefore I like to invest time to explore. If you want to explore on your own here are some recommendations.</p>
-                              <span class="button modal-button" data-target="modal-brain">Brain Food</span>
+                              <span class="button modal-button" id="button9_projects" data-target="modal-brain">Brain Food</span>
                             </div>
                           </div>  
                   </article>
@@ -298,7 +298,7 @@
                   <h3 class="has-text-weight-semibold">@Webrepublic</h3>
                   <div class="date">2019 - NOW</div>
                   <p>After my bachelor degree I was looking for a new challenge. Therefore I immediately started in this demanding and exiting position to expand my knowledge on a daily basis.</p>
-                  <span class="button modal-button is-link is-outlined" data-target="modal-timeline-element-1">More</span>
+                  <span class="button modal-button is-link is-outlined" id="button15_timeline" data-target="modal-timeline-element-1">More</span>
                 </div>
               </div> 
     
@@ -314,7 +314,7 @@
                   <h3 class="has-text-weight-semibold">@ZHAW School of Engineering</h3>
                   <div class="date">2015 - 2019</div>
                   <p>As an engineer with a major in business mathematics, I have acquired mathematical, technical and economic skills. On top of that I also gained thorough knowledge of various programming languages, for instance R and Python.</p>
-                  <span class="button modal-button is-link is-outlined" data-target="modal-timeline-element-2">More</span>
+                  <span class="button modal-button is-link is-outlined" id="button16_timeline" data-target="modal-timeline-element-2">More</span>
                 </div>
               </div>   
           
@@ -330,7 +330,7 @@
                     <h3 class="has-text-weight-semibold">@Schülke & Mayr</h3>
                     <div class="date">2015 - 2019</div>
                     <p>My main tasks included managing projects, advising customers, coordinate work duties as well as planning and carrying out maintenance work on our technical devices all over Switzerland.</p>
-                    <span class="button modal-button is-link is-outlined" data-target="modal-timeline-element-3">More</span>
+                    <span class="button modal-button is-link is-outlined" id="button17_timeline" data-target="modal-timeline-element-3">More</span>
                   </div>
               </div>
 
@@ -588,7 +588,7 @@
                 <span>send message</span>
               </button>
 
-              <a class="button is-primary is-uppercase" href="https://www.linkedin.com/in/michael-kara-bb6b3915a" target="_blank">
+              <a class="button is-primary is-uppercase" href="https://www.linkedin.com/in/michael-kara-bb6b3915a" id="button18_projects" target="_blank">
                   <span class="icon is-medium">
                     <i class="fab fa-linkedin"></i>
                   </span>
@@ -683,15 +683,15 @@
           </header>
           <section class="modal-card-body">
               <div>
-                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://medium.com/" target="_blank">Medium</a>
+                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://medium.com/" id="button10_projects" target="_blank">Medium</a>
                 <p class="has-text-white">space</p>
-                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://medium.com/better-marketing" target="_blank">Medium - better marketing</a>
+                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://medium.com/better-marketing" id="button11_projects" target="_blank">Medium - better marketing</a>
                 <p class="has-text-white">space</p>
-                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://medium.com/better-programming" target="_blank">Medium - better programming</a>
+                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://medium.com/better-programming" id="button12_projects" target="_blank">Medium - better programming</a>
                 <p class="has-text-white">space</p>
-                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://towardsdatascience.com" target="_blank">Towardsdatascience</a>
+                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://towardsdatascience.com" id="button13_projects" target="_blank">Towardsdatascience</a>
                 <p class="has-text-white">space</p>
-                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://www.r-bloggers.com" target="_blank">R-bloggers</a>
+                <a class="button is-fullwidth is-outlined is-rounded is-link" href="https://www.r-bloggers.com" id="button14_projects" target="_blank">R-bloggers</a>
                 <p class="has-text-white">space</p>
               </div>
           </section>
